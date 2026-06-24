@@ -1,20 +1,13 @@
-import java.util.Scanner;
+public class Main {
 
-class Main {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter the number");
-        int n = in.nextInt();
-        int temp = n;
-        int factorial = 1;
-
-        while (temp > 0) {
-            factorial = factorial * temp;
-            temp = temp - 1;
-        }
-
-        System.out.println(n + " = " + factorial);
-
-        in.close();
-    }
+   static int factorial(int n){
+       if(n==1)
+       return 1;
+   
+       return n*factorial(n-1);
+   }
+   public static void main(String[]args){
+       int num =5;
+       System.out.println("factorial =" +factorial(num));
+   }
 }
